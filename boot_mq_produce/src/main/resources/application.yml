@@ -9,6 +9,5 @@ spring:
   jms:
     pub-sub-domain: true # false = Queue | true = Topic
 
-#自己定义队列名称
 myQueue: boot-activemq-queue
 myTopic: boot-activemq-topic

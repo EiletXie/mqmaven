@@ -31,6 +31,7 @@ public class JmsProduce {
 
         // 5、 创建消息的生产者
         MessageProducer messageProducer = session.createProducer(queue);
+        // 设置持久模式，消息丢失后会重发
         messageProducer.setDeliveryMode(DeliveryMode.PERSISTENT);
         // 6、 通过使用messageProducer 生产3条消息发送到MQ的队列里
         for (int i = 1; i <= 3; i++) {
